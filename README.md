@@ -2,10 +2,33 @@
 
 Grecka is a python script to convert Greek to Greeklish based on ELOT 743 (the standard conversion prototype ).
 
+# Install
+
+To install from source run the following commands:
+
+~~~
+$ python setup.py bdist_wheel
+$ pip install dist/grecka-{version}-py3-none-any.whl
+~~~
+
+Remember to replace the version to your current (0.0.1) version.
+
 How to use
 ----------
 
-Import the grecka module and use its methods, as used on the [test](https://github.com/ThemisB/grecka/blob/master/test/test.py) file.
+Via python:
+
+~~~python
+from grecka.convert import Grecka
+
+print(Grecka.toGreeklish("Ελληνικό κείμενο"))
+~~~
+
+Via the entrypoint CLI:
+
+~~~
+$ grecka to-greeklish "Ελληνικό κείμενο"
+~~~
 
 Methods
 -------
@@ -14,4 +37,3 @@ Methods
 
 **Prototype**: `toGreeklish(greekText)` --> Returns the string to its
 ELOT 743 greeklish representation.
-
