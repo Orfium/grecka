@@ -1,11 +1,5 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
-# Conversion is based on ELOT 743
-
 import re
 import sys
-from collections import OrderedDict
 
 if sys.version_info < (3, 0):
     sys.exit("This script requires Python 3 and above.")
